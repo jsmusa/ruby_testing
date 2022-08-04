@@ -87,7 +87,7 @@ describe Array do
 
   context 'when using one let variable on two tests' do
     # Make a let variable that will pass both tests.
-    let(:lucky_numbers) {[42, 0, 0]}
+    let(:lucky_numbers) { [42, 0, 0] }
     # remove the 'x' before running this test
     it 'has length of 3' do
       expect(lucky_numbers.length).to eq(3)
