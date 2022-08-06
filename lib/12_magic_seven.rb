@@ -78,3 +78,5 @@ end
 # game = MagicSeven.new
 # game.play
 # game.display_result
+
+puts

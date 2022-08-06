@@ -70,34 +70,65 @@ describe MagicSeven do
   # Write a test for each of the following methods:
 
   describe '#subtract_four' do
+    context 'when previous step is 26' do
+      it 'returns 22' do
+        previous_step = 26
+        result = game.subtract_four(previous_step)
+        expect(result).to eq(22)
+      end
+    end
   end
 
   describe '#divide_by_two' do
+    context 'when step three is 40' do
+      it 'returns 20' do
+        step_three = 40
+        result = game.divide_by_two(step_three)
+        expect(result).to eq(20)
+      end
+    end
   end
 
   # The following tests will need you to create new instances of MagicSeven with
   # a specific value for the random_number.
   describe '#subtract_random_number' do
+    context 'when step four is 27 and random number is 20' do
+      it 'returns 7' do
+        step_four = 27
+        test_game = MagicSeven.new(20)
+        result = test_game.subtract_random_number(step_four)
+        expect(result).to eq(7)
+      end
+    end
   end
 
   # The #play method will always return seven! Test this game, using any
   # integer as the random_number. Update the context with the number.
   describe '#play' do
-    context 'when the random number is ...' do
+    context 'when the random number is 0' do
       # remove the 'x' before running this test
-      xit 'will return 7' do
+      it 'will return 7' do
+        test_game = MagicSeven.new(0)
+        result = test_game.play
+        expect(result).to eq(7)
       end
     end
 
-    context 'when the random number is ...' do
+    context 'when the random number is 9' do
       # remove the 'x' before running this test
-      xit 'will return 7' do
+      it 'will return 7' do
+        test_game = MagicSeven.new(9)
+        result = test_game.play
+        expect(result).to eq(7)
       end
     end
 
-    context 'when the random number is ...' do
+    context 'when the random number is 20' do
       # remove the 'x' before running this test
-      xit 'will return 7' do
+      it 'will return 7' do
+        test_game = MagicSeven.new(20)
+        result = test_game.play
+        expect(result).to eq(7)
       end
     end
   end
